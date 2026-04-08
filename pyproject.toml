@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sql-debugger-env"
+version = "1.0.0"
+description = "OpenEnv SQL debugger environment"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+]
+
+[project.scripts]
+server = "my_env.server.app:main"
+
+[tool.setuptools]
+packages = ["my_env", "my_env.server"]
