@@ -1,0 +1,43 @@
+tasks = [
+    # EASY: syntax fixes (mostly missing semicolon)
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT * FROM users", "expected": "SELECT * FROM users;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT name FROM employees", "expected": "SELECT name FROM employees;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT id FROM orders", "expected": "SELECT id FROM orders;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT price FROM products", "expected": "SELECT price FROM products;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT email FROM customers", "expected": "SELECT email FROM customers;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT city FROM locations", "expected": "SELECT city FROM locations;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT salary FROM staff", "expected": "SELECT salary FROM staff;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT status FROM shipments", "expected": "SELECT status FROM shipments;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT amount FROM invoices", "expected": "SELECT amount FROM invoices;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT title FROM books", "expected": "SELECT title FROM books;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT model FROM devices", "expected": "SELECT model FROM devices;"},
+    {"name": "syntax_fix", "difficulty": "easy", "input": "SELECT score FROM exams", "expected": "SELECT score FROM exams;"},
+
+    # MEDIUM: logical/type fixes
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT name FROM users WHERE age = 'twenty';", "expected": "SELECT name FROM users WHERE age = 20;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM users WHERE id = '5';", "expected": "SELECT * FROM users WHERE id = 5;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT price FROM items WHERE cost = '100';", "expected": "SELECT price FROM items WHERE cost = 100;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM orders WHERE quantity = '10';", "expected": "SELECT * FROM orders WHERE quantity = 10;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM employees WHERE salary = '50000';", "expected": "SELECT * FROM employees WHERE salary = 50000;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM students WHERE marks = '90';", "expected": "SELECT * FROM students WHERE marks = 90;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM sales WHERE amount = '200';", "expected": "SELECT * FROM sales WHERE amount = 200;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM logs WHERE error_code = '404';", "expected": "SELECT * FROM logs WHERE error_code = 404;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM products WHERE stock = '50';", "expected": "SELECT * FROM products WHERE stock = 50;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM data WHERE value = '300';", "expected": "SELECT * FROM data WHERE value = 300;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM metrics WHERE count = '12';", "expected": "SELECT * FROM metrics WHERE count = 12;"},
+    {"name": "logical_fix", "difficulty": "medium", "input": "SELECT * FROM sessions WHERE duration = '45';", "expected": "SELECT * FROM sessions WHERE duration = 45;"},
+
+    # HARD: join column fixes
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM users JOIN orders ON users.id = orders.user_idd;", "expected": "SELECT * FROM users JOIN orders ON users.id = orders.user_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM customers JOIN sales ON customers.id = sales.customer_idd;", "expected": "SELECT * FROM customers JOIN sales ON customers.id = sales.customer_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM students JOIN marks ON students.id = marks.student_idd;", "expected": "SELECT * FROM students JOIN marks ON students.id = marks.student_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM authors JOIN books ON authors.id = books.author_idd;", "expected": "SELECT * FROM authors JOIN books ON authors.id = books.author_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM users JOIN payments ON users.id = payments.user_idd;", "expected": "SELECT * FROM users JOIN payments ON users.id = payments.user_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM orders JOIN items ON orders.id = items.order_idd;", "expected": "SELECT * FROM orders JOIN items ON orders.id = items.order_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM employees JOIN departments ON employees.id = departments.emp_idd;", "expected": "SELECT * FROM employees JOIN departments ON employees.id = departments.emp_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM accounts JOIN transactions ON accounts.id = transactions.acc_idd;", "expected": "SELECT * FROM accounts JOIN transactions ON accounts.id = transactions.acc_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM teachers JOIN classes ON teachers.id = classes.teacher_idd;", "expected": "SELECT * FROM teachers JOIN classes ON teachers.id = classes.teacher_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM teams JOIN players ON teams.id = players.team_idd;", "expected": "SELECT * FROM teams JOIN players ON teams.id = players.team_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM products JOIN reviews ON products.id = reviews.product_idd;", "expected": "SELECT * FROM products JOIN reviews ON products.id = reviews.product_id;"},
+    {"name": "join_fix", "difficulty": "hard", "input": "SELECT * FROM vendors JOIN invoices ON vendors.id = invoices.vendor_idd;", "expected": "SELECT * FROM vendors JOIN invoices ON vendors.id = invoices.vendor_id;"},
+]

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project runtime outputs
+my_env/outputs/
+output.txt
+
+# Logs and temp
+*.log
+*.tmp
+*.temp
+
+# Jupyter
+.ipynb_checkpoints/

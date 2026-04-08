@@ -1,0 +1,3 @@
+name: sql-debugger-env
+version: "1.0.0"
+description: SQL Debugger RL environment built with OpenEnv
