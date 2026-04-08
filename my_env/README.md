@@ -1,3 +1,12 @@
+---
+title: SQL Debugger
+emoji: "🧠"
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
 # SQL Debugger Environment (OpenEnv)
 
 This package provides a typed OpenEnv environment for SQL debugging tasks.
@@ -19,7 +28,7 @@ uvicorn my_env.server.app:app --host 0.0.0.0 --port 8000 --reload
 ## Docker
 
 ```bash
-docker build -t my-env-sql-debugger -f my_env/server/Dockerfile .
+docker build -t my-env-sql-debugger -f Dockerfile .
 docker run -p 8000:8000 my-env-sql-debugger
 ```
 
